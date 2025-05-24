@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form>
+        <input type="text" placeholder="Họ và tên"/>
+        <input type="number" placeholder="Tuổi" required/>
+         <input type="email" placeholder="Email của bạn"/>   
+         <input type="url" placeholder="Website của bạn"/>
+        <input type="range" min="0" max="100" step="10"/>
+        <input type="date"/>
+        <input type="color"/>
+         <button>Submit</button>         
+    </form> -->
+    <canvas id="bieudo" width="600" height="500"></canvas>
+    <script>
+        const canvas = document.getElementById("bieudo")
+        const ctx = canvas.getContext("2d")
+        // Hình vuông.
+        // ctx.fillStyle="red"
+        // ctx.fillRect(10,10,200,300)
+        // // Hình tròn
+        // ctx.beginPath()
+        // ctx.arc(400,200,100,0,Math.PI*2)
+        // ctx.fill()
+        // Vẽ đường thẳng
+        // ctx.beginPath()
+        // ctx.moveTo(10,10)
+        // ctx.strokeStyle="red"
+        // ctx.lineTo(100,10)
+        // ctx.lineTo(150,50)
+        // ctx.lineTo(200,50)
+        // ctx.stroke()
+        // // Vẽ text
+        // ctx.font="24px Arial"
+        // ctx.fillStyle="blue"
+        // ctx.fillText("WD20320",100,80)
+        const space = 90
+        const doanhso = [100,150,80,200,300,220]
+        // Chiều cao canvas
+        const height = canvas.height
+        console.log(height);
+        ctx.beginPath()
+        ctx.moveTo(0,0)       
+        ctx.lineTo(0,height)
+        ctx.lineTo(canvas.width,height)
+        ctx.stroke()
+        ctx.beginPath()
+        ctx.strokeStyle="red"
+        ctx.moveTo(0,height)       
+        // ctx.lineTo(0,height-100)
+        // ctx.lineTo(space+space,height-150)
+        // ctx.lineTo(space+space+space,height-80)
+        ctx.font="16px Arial"
+        for (let i=0; i<doanhso.length;i++){
+            ctx.lineTo(i*space+space,height-doanhso[i])
+            ctx.fillText(doanhso[i],i*space+space-10,height-doanhso[i]-10)
+        }
+        ctx.stroke()
+    </script>
+</body>
+</html>
