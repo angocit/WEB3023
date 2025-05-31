@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width: 300px;height: 300px; border: 1px solid #ccc;}
+    </style>
+</head>
+<body>
+    <div class="item">
+        <h2 draggable="true" ondragstart="onStart()">Xin chào </h2>
+        <h2 draggable="true" ondragstart="onStart()">Xin chào 1</h2>
+        <h2 draggable="true" ondragstart="onStart()">Xin chào 2</h2>
+        <h2 draggable="true" ondragstart="onStart()">Xin chào 3</h2>
+        <h2 draggable="true" ondragstart="onStart()">Xin chào 4</h2>
+    </div>
+    <div class="box" ondrop="DropItem()" ondragover="drapOver()">1</div>
+    <button onclick="GetLocation()">Lấy vị trí</button>
+    <button onclick="login()">Login</button>
+    <button onclick="getinfo()">Lấy giá trị</button>
+    <script>       
+        let elm;
+        function onStart(){
+            // console.log(event);            
+            elm = event.target
+        }    
+        function DropItem(){
+            event.preventDefault()
+        }
+        function drapOver(){
+            event.preventDefault()
+            if (event.target.className=="box"){
+                event.target.appendChild(elm)
+            }
+        }
+        function GetLocation(){
+            if (navigator.geolocation){
+                // console.log(navigator.geolocation); 
+                navigator.geolocation.getCurrentPosition(function (position){
+                    console.log(position);
+                    console.log("Vĩ độ là:"+position.coords.latitude);
+                    console.log("Kinh độ là:"+position.coords.longitude);   
+                })                
+            }
+            else {
+                alert("Trình duyệt không hỗ trợ")
+            }
+        }
+        // localStorage: Lưu trữ vĩnh viễn
+        // sessionStorage: Lưu cho đến khi đóng trình duyệt
+        function login(){
+            const user = {
+                username:"ngocnv",
+                email:"ngocnv34@fe.edu.vn"
+            }
+            // Lưu giá trị
+            localStorage.setItem("user",JSON.stringify(user))
+            sessionStorage.setItem("user",JSON.stringify(user))
+            
+        }
+        function getinfo(){
+            // Để lấy giá trị từ storage
+            // - Lấy từ localStorage
+           let user = localStorage.getItem("user")
+           // CHuyển sang object
+           user = JSON.parse(user)
+           console.log(user.username);         
+        //   Cú pháp Đối với sessionStorage tương tự  
+        }
+    </script>
+</body>
+</html>

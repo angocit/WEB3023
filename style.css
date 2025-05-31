@@ -1,0 +1,15 @@
+/* Để khai báo biến :root  */
+/* Đặt tên biến: --tenbien */
+:root{
+    --primary-color: #ff0000;
+    --second-color:#0776e6
+}
+@font-face {
+    font-family: "Playwrite";
+    src: url("fonts/PlaywriteHU-Regular.ttf") format("ttf");
+}
+.topbar{
+    background-color: var(--second-color);
+    color: #fff;
+    font-family: "Playwrite", cursive;
+}
