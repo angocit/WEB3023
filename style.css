@@ -4,12 +4,72 @@
     --primary-color: #ff0000;
     --second-color:#0776e6
 }
+body{
+    margin: 0;
+}
 @font-face {
     font-family: "Playwrite";
     src: url("fonts/PlaywriteHU-Regular.ttf") format("ttf");
 }
 .topbar{
-    background-color: var(--second-color);
+    background-color: #000000;
     color: #fff;
-    font-family: "Playwrite", cursive;
+}
+/* Flexbox và gridbox */
+/* 
+flex: sử dụng trong bố cục nhỏ
+gird: Chia layout
+*/
+/* Flex:  */
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+.flex span,.flex .language{
+    width: 25%;
+}
+/* .flex select{order: 1;}
+.flex span{order: 3;} */
+.flex span:nth-child(2){
+    width: 50%;
+    text-align: center;
+    /* order: 1; */
+}
+.flex .language{
+    display: flex;
+    justify-content: flex-end;
+}
+.slide{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    gap: 10px;
+}
+img{max-width: 100%;}
+.slide section{
+    grid-column: 2/6;
+}
+/* media query  */
+/* /Mobile: 720px */
+/* Tablet: 990px*/
+/* Desktop :  */
+@media screen and (max-width:720px){
+    .slide{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:990px) {
+   .slide{
+    grid-template-columns: 25% 25% 25% 25%;
+    }
+    .slide section{
+    grid-column: 2/5;
+        }
 }
