@@ -1,0 +1,19 @@
+2 dạng
+
+1. transition
+Cú pháp:
+transition: all times(s, ms) kiểu_chuyển_động
++kiểu_chuyển_động:
+   - ease Mặc định: Chậm-nhanh-chậm
+   - ease-in: Châm đầu -> nhanh
+   - ease-out: Nhanh đầu -> chậm  
+   - ease-in-out: đầu chậm - nhanh giữa - cuối chậm
+   - linear: chuyển động đều 
+
+Những trạng thái hay dùng:
+- Background
+- Width
+- Position
+- tranform
+- opacity
+2. animation
