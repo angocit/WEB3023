@@ -17,3 +17,20 @@ Những trạng thái hay dùng:
 - tranform
 - opacity
 2. animation
+Cú pháp: animation: tênCĐ time kiểu_chuyển_động số_lần_lặp (sử dụng infinite: lặp vô số lần)
+
+- Định nghĩa chuyển động  
+@keyframes tênCĐ{
+    0%{
+
+    }
+    25%{
+        
+    }
+    50%{
+            fgds
+    }
+    100%{
+            
+    }
+}
