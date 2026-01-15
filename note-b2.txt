@@ -1,0 +1,21 @@
+Type input:
+- text: để nhập văn bản
+- password: nhập mật khẩu
+- email: nhập email (validate email)
+- number: nhập số
+- date: chọn ngày tháng
+- color: Chọn màu sắc
+- file: tải chọn file
+- range: thanh trượt
+Thuộc tính (Attribute) của Input 
+ - name: tên field 
+ - value: giá trị của input 
+ - placeholder: Phần ẩn dưới input (gợi ý nhập)
+ - required: Bắt buộc nhập
+ - readonly: chỉ đọc
+ - disabled: Ẩn mờ. (Vô hiệu hóa)
+ - title: Mô tả lỗi, hoặc tooltip
+Thuộc tính kiểm soát giá trị
+    - min/max: giới hạn giá trị với type như number, range, date
+    - step: Bước nhảy dùng trong number hoặc range 
+    - minlength/maxlength: giới hạn độ dài của chuỗi
