@@ -19,3 +19,60 @@ Thuộc tính kiểm soát giá trị
     - min/max: giới hạn giá trị với type như number, range, date
     - step: Bước nhảy dùng trong number hoặc range 
     - minlength/maxlength: giới hạn độ dài của chuỗi
+
+Thẻ svg
+<svg>
+</svg>
+thuộc tính: 
+- width: xác định độ rộng của thẻ 
+- height: xác định chiều cao của thẻ 
+- viewBox: 
+Cú pháp vẽ 
+    Vẽ hình chữ nhật: 
+     <rect 
+        x="vị trí bắt đầu vẽ của tọa độ x"
+        y="vị trí bắt đầu vẽ của tọa độ y"
+        width="độ rộng của hình vẽ"
+        height="chiều cao của hình vẽ"
+        rx="bo tròn của hình chiều x"
+        ry="bo tròn của hình chiều y"
+        fill: màu nền
+        stroke="màu viền"
+        stroke-width="độ rộng của viền"
+    />
+    Vẽ hình tròn
+    <circle
+        cx="tọa độ x của tâm đường tròn"
+        cy="tọa độ y của tâm đường tròn"
+        r="bán kính đường tròn"
+    />
+    Vẽ hình elip
+    <ellipse
+        cx="tọa độ x của tâm đường elip"
+        cy="tọa độ y của tâm đường elip"
+        rx="bán kính theo chiều x"
+        ry="bán kính theo chiều y"
+    />
+    Vẽ đường thẳng
+    <line
+        x1="tọa độ x điểm bắt đầu"
+        y1="tọa độ y điểm bắt đầu"
+        x2="tọa độ x điểm kết thúc"
+        y1="tọa độ y điểm kết thúc"
+    />
+    Vẽ đường gấp khúc (zizac)
+    <polyline
+        points="x1,y1 x2,y2 x3,y3..."
+    />
+    Đường đa giác kín 
+    <polygon
+        points="x1,y1 x2,y2 x3,y3..."
+    />
+    Vẽ tự do path: Linh động nhất
+    <path d="..."/> => giống như cái bút
+    M 0 0 để di chuyển đến vị trí đặt bút (0,0)
+    L 10 50 để vẽ đường thẳng đến vị trí xy (10,50)
+    H 20 vẽ đường đến tọa độ x chiều ngang (vẽ ngang 20)
+    V 50 vẽ đường thẳng tọa độ y chiều dọc (vẽ dọc 50)
+    C 0 0 50 50 500 0 vẽ đường cong
+    Z để đóng kín đường vẽ
