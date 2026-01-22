@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Ahihih</h1> 
+   <div class="item" ondragover="onDragOver()">
+        <span draggable="true" ondragstart="onStart()">Item 1</span>
+        <span draggable="true" ondragstart="onStart()">Item 2</span>
+        <span draggable="true" ondragstart="onStart()">Item 3</span>
+        <span draggable="true" ondragstart="onStart()">Item 4</span>
+        <span draggable="true" ondragstart="onStart()">Item 5</span>
+   </div>
+   <div class="box">
+        <h3>COntent</h3>
+        <div style="width: 300px; height: 300px; border: 1px solid #ccc;" class="content" ondragover="onDragOver()"></div>
+   </div>
+   <form onsubmit="handleSubmit()"> 
+    <input id="email" type="email" placeholder="email"/>
+    <button type="submit">submit</button>
+   </form>
+   <button onclick="handleGetValue()">Lấy giá trị</button>
+   <button onclick="handleDeleteValue()">Xóa giá trị</button>
+   <script>
+    let elm
+    function onStart(){
+        elm = event.target
+    }
+    function DropItem(){
+        // Ngăn sự kiện mặc định của trình duyệt
+        event.preventDefault()
+    }
+    function onDragOver(){
+        // Ngăn sự kiện mặc định của trình duyệt
+        event.preventDefault()
+        event.target.prepend(elm)
+    }
+    function handleSubmit(){
+         // Ngăn sự kiện mặc định của trình duyệt (chuyển hướng)
+        event.preventDefault()
+        // Lấy giá trị từ input
+        var value = document.getElementById("email").value
+        // sessionStorage: Giá trị sẽ mất khi đóng trình duyệt
+        // localStorage: lưu vĩnh viễn cho đến khi bị xóa đi
+        sessionStorage.setItem("email",value)
+        localStorage.setItem("email",value)
+    }
+    // Để lấy giá trị=> getItem
+    function handleGetValue(){
+        // var value = sessionStorage.getItem("email")
+        var value = localStorage.getItem("email")
+        alert(value)
+    }
+    // Để xóa
+ function handleDeleteValue(){
+    localStorage.removeItem("email")
+ }
+ // Xóa tất cả các key => clear()
+   </script>
+</body>
+</html>
