@@ -1,0 +1,31 @@
+Vẽ canvas
+Cú pháp: Thẻ canvas
+<canvas id="canvasid" width="500" height="500"></canvas>
+
+ Để vẽ được => khởi tạo context vẽ (tạo bút vẽ)
+
+ b1. Truy cập vào canvas cần vẽ qua id
+    var canvas = document.getElementById("canvasid")
+    khởi tạo bút vẽ
+    var ctx = canvas.getContext("2d)
+
+- Quy trình vẽ 
+  beginPath->moveTo(di chuyển bút đến vị trí cần vẽ)-> Vẽ hình gì (lineTo,arc...) -> tô màu,
+  thiết lập viền ->closePath
+
+Cú pháp vẽ hình 
+- Vẽ đường thẳng: lineTo(x,y)
+- Vẽ hình chữ nhật: rect(x,y,width,height)
+- Vẽ hình chữ nhật full màu: fillRect(x,y,width,height)
+- Vẽ đường tròn" arc(x,y,bán kín, góc bắt đầu, góc kết thúc,chiều) 
+trong đó 
+    chiều = true là vẽ ngược kim đồng hồ
+    chiều = false là vẽ theo chiều kim đồng hồ mặc định là false
+    góc(radian) 0 = góc 3h
+
+- Vẽ text
+fillText("Nội dung",x,y)
+
+Liên quan đến style
+ -nền=> fillStyle()
+ -độ rộng của nét vẽ. stroke
