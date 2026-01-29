@@ -27,3 +27,42 @@ box-shadow
 text-shadow 
 cú pháp
 kctrục x_dấu cách_kctrục y_dấu cách_độ mờ_dấu cách_màu sắc   
+
+II- Hiệu ứng chuyển động 
+2 dạng 
+1. transition
+cú pháp: transition: thuộc_tính thời_gian (s,ms) kiểu_chuyển_động
+kiểu chuyển động:
+    ease: chậm->nhanh->chậm
+    ease-in: chậm đầu ->nhanh 
+    ease-out: nhanh đầu->chậm
+    ease-in-out: chậm đầu->nhanh giữa->cuối chậm
+    linear: chuyển động đều 
+Thuộc tính: các thuộc tính của phần tử 
+VD: background
+    width
+    height
+    opacity
+    tranform
+    ...
+Có thể thay thuộc tính = all để áp dụng cho tất cả 
+
+2. animation => định nghĩa chuyển động 
+
+@keyframes tênCĐ{
+    0%{
+
+    }
+    25%{
+
+    }
+    50%{
+
+    }
+    100%{
+
+    }
+}
+
+sử dụng
+ animation: tênCĐ thời_gian(s,ms) kiểu_chuyển_động số_lần_lặp (sử dugj infinite để lặp vô hạn)
