@@ -1,0 +1,29 @@
+1. Background
+- background-color
+- background-image
+- background-repeat
+- background-position
+- background-size
+            màu nền  ảnh nền             lặp             vị trí   size
+background: #000 url('duong-dan-anh') no-repeat/repeat center / cover
+
+Gradients: hiệu ứng màu của background trong css3
+có 2 loại: 
+Hiệu ứng theo đường thẳng: liner-gradient
+Hiệu ứng theo đường tròn: radial-gradient
+Cú pháp:
+- đường thẳng:
+   liner-gradient(hướng, màu 1, màu 2,màu 3...)
+   trong đó
+     hướng: to right
+            to left
+            to bottom
+            to top 
+            góc: 60deg,45deg
+- đường tròn 
+ radial-gradient(circle,màu 1, màu 2)
+2. Shadow
+box-shadow
+text-shadow 
+cú pháp
+kctrục x_dấu cách_kctrục y_dấu cách_độ mờ_dấu cách_màu sắc   
