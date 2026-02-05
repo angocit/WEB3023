@@ -1,0 +1,15 @@
+grid-box và flex-box: Sử dụng là dựng layout
+
+flex: - dựng layout 1 chiều (chiều ngang hoặc chiều dọc)
+grid: - dựng layout 2 chiều (cả ngang và dọc)
+
+ứng dụng khác nhau
+flex: layout nhỏ
+grid: layout lớn.
+
+-Grid:
+Chia cột
+sử dụng: grid-template-column: Chia cột
+flex: 
+Chiều: mặc định là theo chiều ngang 
+muốn thiết lập thì sử dụng thuộc tính flex-direction
