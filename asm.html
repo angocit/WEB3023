@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face{
+            font-family: "Playwite";
+            src: url("/fonts/PlaywriteHU-Light.ttf");
+        }
+        .container{
+            max-width: 1200px;
+            margin: auto;
+        }
+        .flex{
+            display: flex;          
+        }
+        h3{font-family: "Playwite";}
+        header .flex{justify-content: space-between;}
+        header ul{display: flex;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+        header ul li a{text-transform: uppercase; color: #000; padding: 8px 15px;}
+        header ul li a:active{color: red;}
+        #banner img, #products img{ width: 100%;}
+        #products{display: grid; grid-template-columns: repeat(2,1fr); gap: 10px;}
+        .grid{display: grid;}
+        #contact .grid{grid-template-columns: repeat(3,1fr);}
+        #contact .item{display: flex; background-color: #D9D9D9; padding: 10px; gap: 20px; flex-direction: column; align-items: center; justify-content: center;}
+        #contact .item img{height: 59px;}
+        button{background-color: #0486FD; padding: 20px 10px; color: #fff; font-size: 24px; border: 0;border-radius: 20px;}
+    #about ul{gap: 20px;}
+    #about tbody{border-top: 1px solid #000;border-bottom: 1px solid #000;}
+    #about button {
+    margin: auto;
+    display: block;
+    position: relative;
+    top: -125px;
+}
+footer{background-color: #D9D9D9;}
+footer .top,footer .bot{display: grid; grid-template-columns: repeat(2,1fr);}
+footer button{background-color: #113D6B; font-size: 14px; border-radius: 0; padding: 8px 10px;}
+footer input{padding: 8px;}
+footer .top ul{display: flex;gap: 10px;}
+#products .item{transition: all 2s linear; opacity: 1;}
+#products .item:hover{
+    transform: rotate(360deg);
+    opacity: 0.5;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="flex">
+        <a>
+            <svg width="50px" height="50px" viewBox="0 0 100 100">
+                <rect x="0" y="0" width="100" height="100" fill="#076AFF" rx="10" ry="10"/>\
+                <polygon points="20,80 50,80 35,60" fill="#fff"/>
+                <polygon points="44,80 80,80 62,50" fill="#fff"/>
+            </svg>
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Mẫu xe</a>
+                </li>
+                <li>
+                    <a href="#">Dịch vụ</a>
+                </li>
+                <li>
+                    <a href="#">Khám phá BMW</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+        </div>
+    </header>
+    <section id="banner">
+        <img src="/images/banner.jpg"/>
+    </section>
+     <section id="products">
+        <div class="item">
+            <a href="#">
+                <img src="/images/sp1.jpg"/>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <img src="/images/sp2.jpg"/>
+            </a>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="grid">
+        <span class="item">
+            <img src="/images/icon1.svg"/>
+            <button>Đặt lịch lái thử</button>
+        </span>
+        <span class="item">
+            <img src="/images/icon2.svg"/>
+            <button>Yêu cầu dịch vụ</button>
+        </span>
+        <span class="item">
+            <img src="/images/icon3.svg"/>
+            <button>Showroom</button>
+        </span>
+        </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mẫu xe</th>
+                    <th>Kiểu loại</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tất cả</td>
+                    <td>
+                        <ul class="flex">
+                            <li>BMWi</li>
+                            <li>X</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>Z4</li>
+                        </ul>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <img src="/images/banner2.png"/>
+        <button>Khám phá các mẫu xe</button>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="top">
+                <div class="col">
+                    <h3>Choose Language</h3>
+                    <ul>
+                        <li><a href="#">VietNam</a></li>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Liên hệ chúng tôi</h3>
+                    <form>
+                        <button type="submit">SendEmail</button>
+                        <input type="email" placeholder="Enter your email here"/>
+                    </form>
+                </div>
+            </div>
+            <div class="bot">
+                 <div class="col">
+                    <h3>Trải nghiệm cùng BMW</h3>
+                    <ul>
+                        <li><a href="#">Bán hàng theo lô và ngoại giao</a></li>
+                        <li><a href="#">BMW.com</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Thông tin pháp lý</h3>
+                    <ul>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Bản quyền</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
